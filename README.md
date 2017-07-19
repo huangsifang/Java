@@ -246,3 +246,33 @@ public Circle(double radius) {
 public Circle() {
 	this(1.0); //调用另一个构造方法，在其他任何可执行的语句之前出现
 }
+
+将基本数据类型包装成对象：
+Boolean, Character, Double, Float, Byte, Short, Integer, Long
+包含doubleValue(), floatValue(), intValue(), longValue(), shortValue(), byteValue()方法，将对象“转换”为基本数据类型
+
+构造包装类：new Double(5.0)  new Double("5.0")
+
+利用包装类表示基本数值的最大最小值：Integer.MAX_VALUE, Integer.MIN_VALUE
+
+比较两个包装类数值：
+new Double(12.4).compareTo(new Double(12.3)) //return 1
+
+创建一个新对象，并将它初始化为指定字符串表示的值
+Double doubleObject = Double.valueOf("12.4");
+
+Integer.parseInt("1");
+Integer.parseInt("1010101", 2); //转化为二进制
+Double.parseDouble("1.1");
+Byte.parseByte();
+Short.parseShort();
+Long.parseLong();
+Float.parseFloat();
+
+String.format("%x", 26); //return 1A，使用format将十进制数26转化为十六进制数1A
+
+BigInteger和BigDecimal类可以表示任意大小和精度的整数或十进制数
+BigInteger a = new BigInteger("1234567890987654321");
+BigInteger b = new BigInteger("2");
+BigInteger c = a.multiply(b);
+算数运算：add, subtract, multiple, divide, remainder
